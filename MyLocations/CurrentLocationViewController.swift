@@ -23,8 +23,8 @@ class CurrentLocationViewController: UIViewController,
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var tagButton: UIButton!
-    @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var tagButton: UILabel!
+    @IBOutlet weak var getButton: UILabel!
     
 
     override func viewDidLoad() {
