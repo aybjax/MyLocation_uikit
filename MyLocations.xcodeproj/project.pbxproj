@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B96E2666A63F00AA7220 /* AppDelegate.swift */; };
 		AD20B9712666A63F00AA7220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B9702666A63F00AA7220 /* SceneDelegate.swift */; };
-		AD20B9732666A63F00AA7220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B9722666A63F00AA7220 /* ViewController.swift */; };
+		AD20B9732666A63F00AA7220 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B9722666A63F00AA7220 /* CurrentLocationViewController.swift */; };
 		AD20B9762666A63F00AA7220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD20B9742666A63F00AA7220 /* Main.storyboard */; };
 		AD20B9782666A63F00AA7220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD20B9772666A63F00AA7220 /* Assets.xcassets */; };
 		AD20B97B2666A63F00AA7220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD20B9792666A63F00AA7220 /* LaunchScreen.storyboard */; };
+		AD20B98E2666AFFE00AA7220 /* SecondTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B98D2666AFFE00AA7220 /* SecondTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD20B96B2666A63F00AA7220 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD20B96E2666A63F00AA7220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD20B9702666A63F00AA7220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD20B9722666A63F00AA7220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD20B9722666A63F00AA7220 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 		AD20B9752666A63F00AA7220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD20B9772666A63F00AA7220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD20B97A2666A63F00AA7220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD20B97C2666A63F00AA7220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD20B98D2666AFFE00AA7220 /* SecondTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				AD20B96E2666A63F00AA7220 /* AppDelegate.swift */,
 				AD20B9702666A63F00AA7220 /* SceneDelegate.swift */,
-				AD20B9722666A63F00AA7220 /* ViewController.swift */,
+				AD20B9722666A63F00AA7220 /* CurrentLocationViewController.swift */,
+				AD20B98D2666AFFE00AA7220 /* SecondTabController.swift */,
 				AD20B9742666A63F00AA7220 /* Main.storyboard */,
 				AD20B9772666A63F00AA7220 /* Assets.xcassets */,
 				AD20B9792666A63F00AA7220 /* LaunchScreen.storyboard */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD20B9732666A63F00AA7220 /* ViewController.swift in Sources */,
+				AD20B98E2666AFFE00AA7220 /* SecondTabController.swift in Sources */,
+				AD20B9732666A63F00AA7220 /* CurrentLocationViewController.swift in Sources */,
 				AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */,
 				AD20B9712666A63F00AA7220 /* SceneDelegate.swift in Sources */,
 			);
