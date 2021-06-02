@@ -123,6 +123,7 @@
                     <tabBarItem key="tabBarItem" title="Tag" image="circle.fill" catalog="system" id="eQm-Wb-lec"/>
                     <connections>
                         <outlet property="addressLabel" destination="62Y-xg-S4d" id="08d-Mv-7be"/>
+                        <outlet property="getButton" destination="Cpx-e9-LrN" id="JPU-T2-m1J"/>
                         <outlet property="latitudeLabel" destination="Yid-FO-60W" id="HkY-Ln-WVN"/>
                         <outlet property="longitudeLabel" destination="wyV-3j-Yz5" id="ZbX-no-WbF"/>
                         <outlet property="messageLabel" destination="VMy-Hd-m52" id="EEU-Hb-oGr"/>
