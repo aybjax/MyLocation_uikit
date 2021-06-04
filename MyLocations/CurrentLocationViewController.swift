@@ -287,20 +287,20 @@ class CurrentLocationViewController: UIViewController,
             performingReverseGeocoding = true
             geocoder.reverseGeocodeLocation(newLocation, completionHandler: {
                 placemark, error in
-//                if let error = error {
-//                    print("*** Reverse Geocoing error: \(error.localizedDescription)")
-//
-//                    return
-//                }
-//
-//                if let places = placemark {
-//                    print("*** Found places: \(places)")
-//                }
+                if let error = error {
+                    print("*** Reverse Geocoing error: \(error.localizedDescription)")
+
+                    return
+                }
+
+                if let places = placemark {
+                    print("*** Found places: \(places)")
+                }
                 self.lastLocationError = error
                 
                 if error == nil, let p = placemark, !p.isEmpty {
                     //for faking crash
-//                    self.placemark = p.last!
+                    self.placemark = p.last!
                 } else {
                     self.placemark = nil
                 }
