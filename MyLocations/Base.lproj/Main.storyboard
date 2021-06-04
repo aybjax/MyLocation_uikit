@@ -302,15 +302,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI0-7U-PmV">
-                                                    <rect key="frame" x="20" y="11.666666666666664" width="80" height="21"/>
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="80" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ccf-by-yUZ">
+                                                    <rect key="frame" x="100" y="11" width="274.66666666666669" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="qVN-1A-fKu"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KI0-7U-PmV" firstAttribute="leading" secondItem="XmR-gF-7dD" secondAttribute="leadingMargin" id="PS4-bh-J3F"/>
-                                                <constraint firstItem="KI0-7U-PmV" firstAttribute="centerY" secondItem="XmR-gF-7dD" secondAttribute="centerY" id="WYJ-Rd-QqN"/>
+                                                <constraint firstItem="KI0-7U-PmV" firstAttribute="leading" secondItem="XmR-gF-7dD" secondAttribute="leadingMargin" id="1G9-WA-piu"/>
+                                                <constraint firstItem="Ccf-by-yUZ" firstAttribute="top" secondItem="XmR-gF-7dD" secondAttribute="topMargin" id="JnY-f7-gEt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ccf-by-yUZ" secondAttribute="bottom" id="QBK-Ph-xV8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ccf-by-yUZ" secondAttribute="trailing" id="S7x-ft-rwS"/>
+                                                <constraint firstItem="KI0-7U-PmV" firstAttribute="centerY" secondItem="Ccf-by-yUZ" secondAttribute="centerY" id="SmM-uJ-Tsa"/>
+                                                <constraint firstItem="KI0-7U-PmV" firstAttribute="top" secondItem="XmR-gF-7dD" secondAttribute="topMargin" constant="0.6666666666666643" id="sNH-fN-WnG"/>
+                                                <constraint firstItem="Ccf-by-yUZ" firstAttribute="leading" secondItem="KI0-7U-PmV" secondAttribute="trailing" id="v7r-8B-PUv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -440,17 +451,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotoLabel" destination="KI0-7U-PmV" id="0P7-KO-uQh"/>
                         <outlet property="addressLabel" destination="rgI-55-Tzb" id="bnJ-1i-3QH"/>
                         <outlet property="categoryLabel" destination="COO-80-X5j" id="3vy-ab-BqE"/>
                         <outlet property="dateLabel" destination="XH8-or-2zw" id="UHr-VG-caN"/>
                         <outlet property="descriptionTextView" destination="7I8-HS-iYO" id="iaA-Hs-CCq"/>
+                        <outlet property="imageHeight" destination="qVN-1A-fKu" id="liF-vs-jgZ"/>
+                        <outlet property="imageView" destination="Ccf-by-yUZ" id="XTR-PE-Gc2"/>
                         <outlet property="latitudeLabel" destination="M8F-0c-zMf" id="YLN-eT-PvF"/>
                         <outlet property="longitudeLabel" destination="xIc-rT-Oop" id="xeR-Tw-tpt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Kr-an-kNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-500"/>
+            <point key="canvasLocation" x="1330.4347826086957" y="-500.54347826086962"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="Qhq-Jk-L8T">
