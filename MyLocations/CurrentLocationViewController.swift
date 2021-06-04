@@ -43,11 +43,14 @@ class CurrentLocationViewController: UIViewController,
         // cannot get window.rootViewController from Scene/App delegate
 //        let delegate = UIApplication.shared.delegate as! AppDelegate
         
-        let scene: UIScene = UIApplication.shared.connectedScenes.first!
+        // corrected for scene delegate but below is with dependency injection
+//        let scene: UIScene = UIApplication.shared.connectedScenes.first!
+//
+//        let delegate: SceneDelegate = scene.delegate as! SceneDelegate
+//
+//        managedObjectContext = delegate.managedObjectContext
         
-        let delegate: SceneDelegate = scene.delegate as! SceneDelegate
         
-        managedObjectContext = delegate.managedObjectContext
         
         print(applicationDocmentsDirectory)
     }
