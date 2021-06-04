@@ -22,6 +22,7 @@
 		AD20B98E2666AFFE00AA7220 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */; };
 		AD820FDF266A7EBD001BD481 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */; };
 		AD820FE3266A8A4F001BD481 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD820FE2266A8A4F001BD481 /* LocationCell.swift */; };
+		AD820FE7266AA6AF001BD481 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD820FE6266AA6AF001BD481 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		AD820FE2266A8A4F001BD481 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		AD820FE6266AA6AF001BD481 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */,
 				AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */,
 				AD20B9742666A63F00AA7220 /* Main.storyboard */,
+				AD820FE6266AA6AF001BD481 /* MapViewController.swift */,
 				AD20B9702666A63F00AA7220 /* SceneDelegate.swift */,
 			);
 			path = MyLocations;
@@ -173,6 +176,7 @@
 				AD1EB932266945A300CEA75E /* HudView.swift in Sources */,
 				AD820FDF266A7EBD001BD481 /* LocationsViewController.swift in Sources */,
 				AD1EB9462669550300CEA75E /* Location+CoreDataProperties.swift in Sources */,
+				AD820FE7266AA6AF001BD481 /* MapViewController.swift in Sources */,
 				AD820FE3266A8A4F001BD481 /* LocationCell.swift in Sources */,
 				AD1EB93526694F0D00CEA75E /* Functions.swift in Sources */,
 				AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */,
