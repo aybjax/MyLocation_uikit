@@ -10,6 +10,9 @@
 		AD1EB92F2669339E00CEA75E /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB92E2669339E00CEA75E /* CategoryPickerViewController.swift */; };
 		AD1EB932266945A300CEA75E /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB931266945A300CEA75E /* HudView.swift */; };
 		AD1EB93526694F0D00CEA75E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB93426694F0D00CEA75E /* Functions.swift */; };
+		AD1EB9392669520400CEA75E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB9372669520400CEA75E /* DataModel.xcdatamodeld */; };
+		AD1EB9452669550300CEA75E /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB9412669550300CEA75E /* Location+CoreDataClass.swift */; };
+		AD1EB9462669550300CEA75E /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1EB9432669550300CEA75E /* Location+CoreDataProperties.swift */; };
 		AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B96E2666A63F00AA7220 /* AppDelegate.swift */; };
 		AD20B9712666A63F00AA7220 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B9702666A63F00AA7220 /* SceneDelegate.swift */; };
 		AD20B9732666A63F00AA7220 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B9722666A63F00AA7220 /* CurrentLocationViewController.swift */; };
@@ -23,6 +26,9 @@
 		AD1EB92E2669339E00CEA75E /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		AD1EB931266945A300CEA75E /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		AD1EB93426694F0D00CEA75E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		AD1EB9382669520400CEA75E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		AD1EB9422669550300CEA75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = "MyLocations/Base.lproj/Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD1EB9442669550300CEA75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = "MyLocations/Base.lproj/Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AD20B96B2666A63F00AA7220 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD20B96E2666A63F00AA7220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD20B9702666A63F00AA7220 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		AD20B9622666A63F00AA7220 = {
 			isa = PBXGroup;
 			children = (
+				AD1EB9412669550300CEA75E /* Location+CoreDataClass.swift */,
+				AD1EB9432669550300CEA75E /* Location+CoreDataProperties.swift */,
 				AD20B96D2666A63F00AA7220 /* MyLocations */,
 				AD20B96C2666A63F00AA7220 /* Products */,
 			);
@@ -70,6 +78,7 @@
 				AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */,
 				AD20B9742666A63F00AA7220 /* Main.storyboard */,
 				AD1EB931266945A300CEA75E /* HudView.swift */,
+				AD1EB9372669520400CEA75E /* DataModel.xcdatamodeld */,
 				AD1EB93426694F0D00CEA75E /* Functions.swift */,
 				AD20B9772666A63F00AA7220 /* Assets.xcassets */,
 				AD1EB92E2669339E00CEA75E /* CategoryPickerViewController.swift */,
@@ -153,10 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD20B98E2666AFFE00AA7220 /* LocationDetailsViewController.swift in Sources */,
+				AD1EB9392669520400CEA75E /* DataModel.xcdatamodeld in Sources */,
 				AD20B9732666A63F00AA7220 /* CurrentLocationViewController.swift in Sources */,
 				AD1EB932266945A300CEA75E /* HudView.swift in Sources */,
+				AD1EB9462669550300CEA75E /* Location+CoreDataProperties.swift in Sources */,
 				AD1EB93526694F0D00CEA75E /* Functions.swift in Sources */,
 				AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */,
+				AD1EB9452669550300CEA75E /* Location+CoreDataClass.swift in Sources */,
 				AD1EB92F2669339E00CEA75E /* CategoryPickerViewController.swift in Sources */,
 				AD20B9712666A63F00AA7220 /* SceneDelegate.swift in Sources */,
 			);
@@ -165,6 +177,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AD1EB9412669550300CEA75E /* Location+CoreDataClass.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD1EB9422669550300CEA75E /* Base */,
+			);
+			name = "Location+CoreDataClass.swift";
+			sourceTree = "<group>";
+		};
+		AD1EB9432669550300CEA75E /* Location+CoreDataProperties.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD1EB9442669550300CEA75E /* Base */,
+			);
+			name = "Location+CoreDataProperties.swift";
+			sourceTree = "<group>";
+		};
 		AD20B9742666A63F00AA7220 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AD1EB9372669520400CEA75E /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AD1EB9382669520400CEA75E /* DataModel.xcdatamodel */,
+			);
+			currentVersion = AD1EB9382669520400CEA75E /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AD20B9632666A63F00AA7220 /* Project object */;
 }

@@ -6,14 +6,39 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+//    lazy var persistentContainer: NSPersistentContainer = {
+//        let container = NSPersistentContainer(name: "DataModel")
+//        container.loadPersistentStores { (storeDescription, error)
+//            in
+//            if let error = error {
+//                fatalError("Could not load data store: \(error)")
+//            }
+//        }
+//
+//        return container
+//    }()
+//
+//    lazy var managedObjectContext: NSManagedObjectContext = persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let tabController = window!.rootViewController as! UITabBarController
+//        
+//        if let tabViewControllers = tabController.viewControllers {
+//            let navController = tabViewControllers[0] as! UINavigationController
+//            let controller = navController.viewControllers.first as! CurrentLocationViewController
+//            controller.managedObjectContext = managedObjectContext
+//        }
+        
+//        listenForFatalCoreDataNotifications()
+        
         return true
     }
 
@@ -31,6 +56,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+//    // MARK: -Helper
+//    func listenForFatalCoreDataNotifications() {
+//        NotificationCenter.default.addObserver(forName: CoreDataSaveFailedNotification,
+//                                               object: nil,
+//                                               queue: OperationQueue.main,
+//                                               using: { notification in
+//                                                let message = """
+//                                                There was a fatal error in the app and it cannot continue.
+//                                                Press OK to terminate the app. Sorry for the inconvinience.
+//                                                """
+//                                                
+//                                                let alert = UIAlertController(title: "Internal Error",
+//                                                                              message: message,
+//                                                                              preferredStyle: .alert)
+//                                                
+//                                                let action = UIAlertAction(title: "OK", style: .default) { _ in 
+//                                                    let exception = NSException(
+//                                                        name: NSExceptionName.internalInconsistencyException,
+//                                                        reason: "Fatal Core Data Error",
+//                                                        userInfo: nil)
+//                                                    
+//                                                    exception.raise()
+//                                                }
+//                                                alert.addAction(action)
+//                                                
+//                                                let tabController = self.window!.rootViewController!
+//                                                tabController.present(alert, animated: true, completion: nil)
+//                                               })
+//    }
 }
 

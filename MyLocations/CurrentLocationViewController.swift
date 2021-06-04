@@ -7,12 +7,14 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class CurrentLocationViewController: UIViewController,
                                      CLLocationManagerDelegate{
     
     // Properties
     // ==========
+    var managedObjectContext: NSManagedObjectContext!
     
     let locationManager = CLLocationManager()
     var location: CLLocation?
@@ -37,6 +39,17 @@ class CurrentLocationViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
+        
+        // cannot get window.rootViewController from Scene/App delegate
+//        let delegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let scene: UIScene = UIApplication.shared.connectedScenes.first!
+        
+        let delegate: SceneDelegate = scene.delegate as! SceneDelegate
+        
+        managedObjectContext = delegate.managedObjectContext
+        
+        print(applicationDocmentsDirectory)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -209,6 +222,7 @@ class CurrentLocationViewController: UIViewController,
             let controller = segue.destination as! LocationDetailsViewController
             controller.coordinate = location!.coordinate
             controller.placemark = placemark
+            controller.managedObjectContext = managedObjectContext
         }
         else {
             print("Missed it")
@@ -282,7 +296,8 @@ class CurrentLocationViewController: UIViewController,
                 self.lastLocationError = error
                 
                 if error == nil, let p = placemark, !p.isEmpty {
-                    self.placemark = p.last!
+                    //for faking crash
+//                    self.placemark = p.last!
                 } else {
                     self.placemark = nil
                 }
