@@ -11,7 +11,8 @@ import CoreLocation
 
 class LocationsViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
-    
+    var locations = [Location]()
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,22 @@ class LocationsViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        let fetchRequest = NSFetchRequest<Location>()
+        let entity = Location.entity()
+        fetchRequest.entity = entity
+        
+        let sortDescriptor = NSSortDescriptor(key: "date",
+                                              ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do {
+            locations = try managedObjectContext.fetch(fetchRequest)
+        }
+        catch {
+            fatalCoreDataError(error)
+        }
     }
 
     // MARK: - Table view data source
@@ -32,18 +49,44 @@ class LocationsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return locations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell",
-                                                 for: indexPath)
+                                                 for: indexPath) as! LocationCell
         
-        let descriptionLabel = cell.viewWithTag(100) as! UILabel
-        descriptionLabel.text = "If you can see this"
+        let location = locations[indexPath.row]
         
-        let addressLabel = cell.viewWithTag(101) as! UILabel
-        addressLabel.text = "Then it workds"
+        cell.configure(for: location)
+        
+//        let location = locations[indexPath.row]
+//
+//        let descriptionLabel = cell.viewWithTag(100) as! UILabel
+//        descriptionLabel.text = location.locationDescription
+//
+//        let addressLabel = cell.viewWithTag(101) as! UILabel
+//
+//        if let placemark = location.placemark {
+//            var text = ""
+//
+//            if let s = placemark.subThoroughfare {
+//                text += s + " "
+//            }
+//
+//            if let s = placemark.thoroughfare {
+//                text += s + ", "
+//            }
+//
+//            if let s = placemark.locality {
+//                text += s
+//            }
+//
+//            addressLabel.text = text
+//        }
+//        else {
+//            addressLabel.text = ""
+//        }
         
         return cell
     }
@@ -102,6 +145,18 @@ class LocationsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditLocation" {
+            let controller = segue.destination as! LocationDetailsViewController
+            controller.managedObjectContext = managedObjectContext
+            
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                let location = locations[indexPath.row]
+                controller.locationToEdit = location
+            }
+        }
+    }
 
 }
 

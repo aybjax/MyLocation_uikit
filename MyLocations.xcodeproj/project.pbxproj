@@ -21,6 +21,7 @@
 		AD20B97B2666A63F00AA7220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD20B9792666A63F00AA7220 /* LaunchScreen.storyboard */; };
 		AD20B98E2666AFFE00AA7220 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */; };
 		AD820FDF266A7EBD001BD481 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */; };
+		AD820FE3266A8A4F001BD481 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD820FE2266A8A4F001BD481 /* LocationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AD20B97C2666A63F00AA7220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		AD820FE2266A8A4F001BD481 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				AD1EB931266945A300CEA75E /* HudView.swift */,
 				AD20B97C2666A63F00AA7220 /* Info.plist */,
 				AD20B9792666A63F00AA7220 /* LaunchScreen.storyboard */,
+				AD820FE2266A8A4F001BD481 /* LocationCell.swift */,
 				AD20B98D2666AFFE00AA7220 /* LocationDetailsViewController.swift */,
 				AD820FDE266A7EBD001BD481 /* LocationsViewController.swift */,
 				AD20B9742666A63F00AA7220 /* Main.storyboard */,
@@ -170,6 +173,7 @@
 				AD1EB932266945A300CEA75E /* HudView.swift in Sources */,
 				AD820FDF266A7EBD001BD481 /* LocationsViewController.swift in Sources */,
 				AD1EB9462669550300CEA75E /* Location+CoreDataProperties.swift in Sources */,
+				AD820FE3266A8A4F001BD481 /* LocationCell.swift in Sources */,
 				AD1EB93526694F0D00CEA75E /* Functions.swift in Sources */,
 				AD20B96F2666A63F00AA7220 /* AppDelegate.swift in Sources */,
 				AD1EB9452669550300CEA75E /* Location+CoreDataClass.swift in Sources */,

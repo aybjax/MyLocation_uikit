@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="58" id="WIC-gN-19G">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="58" id="WIC-gN-19G" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIC-gN-19G" id="g4c-U0-SYs">
@@ -149,6 +149,11 @@
                                         <constraint firstAttribute="bottom" secondItem="d7v-Xc-hYW" secondAttribute="bottom" id="oHU-dO-vXI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="d7v-Xc-hYW" id="ulL-Pa-LLZ"/>
+                                    <outlet property="descriptionLabel" destination="AJQ-hK-TAc" id="Ubl-6M-diq"/>
+                                    <segue destination="2Yb-Yf-peZ" kind="show" identifier="EditLocation" id="Ssd-yZ-Elx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -482,6 +487,9 @@
             <point key="canvasLocation" x="-357.97101449275362" y="-511.14130434782612"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ssd-yZ-Elx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
