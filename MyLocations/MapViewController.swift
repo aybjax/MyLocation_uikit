@@ -14,7 +14,24 @@ class MapViewController: UIViewController {
     
     var locations = [Location]()
     
-    var managedObjectContext: NSManagedObjectContext!
+    var managedObjectContext: NSManagedObjectContext! {
+        didSet {
+            NotificationCenter.default.addObserver(forName: Notification.Name.NSManagedObjectContextObjectsDidChange,
+                                                   object: managedObjectContext,
+                                                   queue: OperationQueue.main) { notification in
+                if self.isViewLoaded {
+                    self.updateLocations()
+                    
+                    if let dictionary = notification.userInfo {
+                        print(dictionary[NSInsertedObjectsKey])
+                        print(dictionary[NSUpdatedObjectsKey])
+                        print(dictionary[NSDeletedObjectsKey])
+                    }
+                }
+                
+            }
+        }
+    }
     
     // MARK: - Helper Methods
     func updateLocations() {
